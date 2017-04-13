@@ -2,7 +2,6 @@
   <h3>Add Todo</h3>
   <form (submit)="addTodo()">
     <input class="form-control" type="text" [(ngModel)]="text" name="text" />
-    <label class="lead">{{text}}</label>
   </form>
 </div>
 
@@ -17,6 +16,6 @@
 
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let todo of todos">
-    <span (click)="editTodo(todo)">{{todo.text}}</span> <button (click)="deleteTodo(todo.text)">x</button>
+    <span (click)="editTodo(todo)" class="lead">{{todo.text}}</span> <button (click)="deleteTodo(todo.text)">x</button>
   </li>
 </ul>
